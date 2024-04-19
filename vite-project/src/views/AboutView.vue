@@ -1,6 +1,10 @@
 <template>
   <div class="about">
-    <h1>This is an about page hi zi yang fan</h1>
+    <h1>
+        <div>MMM</div>
+        <div>\ ` ` /</div>
+       <div>(o _ o)</div>
+    </h1>
   </div>
 </template>
 
