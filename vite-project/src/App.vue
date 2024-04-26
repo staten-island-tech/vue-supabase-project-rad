@@ -1,7 +1,26 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import { store } from "./store";
+import { supabase } from "./supabase";
+import Auth from './Auth.vue'
+import { onMounted } from 'vue'
+onMounted(()=>{
+  // we initially verify if a user is logged in with Supabase
+  store.state.user = supabase.auth.getUser();
+    // we then set up a listener to update the store when the user changes either by logging in or out
+    supabase.auth.onAuthStateChange((event, session) => {
+      if (event == "SIGNED_OUT" || session === null) {
+        store.state.user = null;
+      } else {
+        store.state.user = session.user;
+      }
+    });
 
+    return {
+      store,
+    };
+})
 </script>
 
 <template>
@@ -9,7 +28,8 @@ import HelloWorld from './components/HelloWorld.vue'
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="chimchin nuges" />
+      <Auth v-if="!store.state.user" />
+      <HelloWorld v-else msg="chimchin nuges" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
