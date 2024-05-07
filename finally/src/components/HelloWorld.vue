@@ -11,9 +11,11 @@ defineProps({
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
-      ROBBING SIMULATOR
-      SIX CARDS, RANDOM FAKE PEOPLE
-      ADDRESS, AGE, # OF FAMILY, NET WORTH, PIC OF HOUSE
+      ROBBING SIMULATOR/
+      SIX CARDS, RANDOM FAKE PEOPLE/
+      ADDRESS, AGE, # OF FAMILY, NET WORTH, PIC OF HOUSE/
+
+      add ur own card: need to create the "edit", "add", "create" nodes... also be able to add picture??
       <a href="https://supabase.com/dashboard/project/qgvssenardkgfmbwoytz/editor/29208" target="_blank" rel="noopener">Table Editor</a> +
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>
