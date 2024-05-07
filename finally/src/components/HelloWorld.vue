@@ -11,7 +11,9 @@ defineProps({
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
-      We are doing a budgeting project...
+      ROBBING SIMULATOR
+      SIX CARDS, RANDOM FAKE PEOPLE
+      ADDRESS, AGE, # OF FAMILY, NET WORTH, PIC OF HOUSE
       <a href="https://supabase.com/dashboard/project/qgvssenardkgfmbwoytz/editor/29208" target="_blank" rel="noopener">Table Editor</a> +
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>
