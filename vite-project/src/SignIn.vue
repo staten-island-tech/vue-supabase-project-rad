@@ -29,7 +29,7 @@
       const handleSignin = async () => {
         try {
           // Use the Supabase provided method to handle the signin
-          const { error } = await supabase.auth.signIn({
+          const { error } = await supabase.auth.signInWithPassword({
             email: email.value,
             password: password.value,
           });

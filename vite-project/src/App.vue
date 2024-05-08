@@ -5,6 +5,7 @@ import { store } from "./store";
 import { supabase } from "./supabase";
 import Auth from './Auth.vue'
 import { onMounted } from 'vue'
+import SignOut from './SignOut.vue'
 onMounted(()=>{
   // we initially verify if a user is logged in with Supabase
   store.state.user = supabase.auth.getUser();
@@ -24,12 +25,15 @@ onMounted(()=>{
 </script>
 
 <template>
+  <div class="outer">
+  <sign-out v-if="store.state.user"/>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
       <Auth v-if="!store.state.user" />
-      <HelloWorld v-else msg="chimchin nuges" />
+      <HelloWorld v-else msg="chimchin nuges"
+       />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -37,12 +41,17 @@ onMounted(()=>{
       </nav>
     </div>
   </header>
+</div>
  <!--  <input id="ea" type="text" value="">
  -->
   <RouterView />
 </template>
 
 <style scoped>
+.outer {
+  display: flex;
+  flex-direction: column;
+}
 header {
   line-height: 1.5;
   max-height: 100vh;
