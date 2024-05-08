@@ -10,10 +10,11 @@ defineProps({
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
+    <h1>GO ROB PEOPLE AAAAAAAAAAAAAAAAAAAAAAAA</h1>
     <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
+      GET OUTA HERE
+      <a href="google.com" target="_blank" rel="noopener">Google</a> 
+      <a href="https://classroom.google.com/c/NjI4MjQ3OTIyNTYy" target="_blank" rel="noopener">Class</a>.
     </h3>
   </div>
 </template>
