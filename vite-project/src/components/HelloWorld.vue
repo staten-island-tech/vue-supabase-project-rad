@@ -10,7 +10,7 @@ defineProps({
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
-    <h1>GO ROB PEOPLE AAAAAAAAAAAAAAAAAAAAAAAA</h1>
+    <h1>YOU SIGNED IN KHANGRABULASHION</h1>
     <h3>
       GET OUTA HERE
       <a href="google.com" target="_blank" rel="noopener">Google</a> 
