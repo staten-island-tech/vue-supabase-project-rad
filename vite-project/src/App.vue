@@ -31,13 +31,10 @@ onMounted(()=>{
 
     <div class="wrapper">
       <Auth v-if="!store.state.user" />
-      <HelloWorld v-else msg="chimchin nuges"
+      <HelloWorld v-else msg=""
        />
 
-      <nav>
-       <!--  <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About zi yang fan</RouterLink> -->
-      </nav>
+   
     </div>
   </header>
 </div>
