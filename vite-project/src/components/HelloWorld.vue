@@ -5,6 +5,10 @@ defineProps({
     required: true
   }
 })
+
+import PostItList from './PostItList.vue';
+
+
 </script>
 
 <template>
@@ -12,6 +16,10 @@ defineProps({
     <h1 class="green">{{ msg }}</h1>
     <h1>YOU SIGNED IN</h1>
         
+  </div>
+
+  <div>
+    <PostItList />
   </div>
 </template>
 
