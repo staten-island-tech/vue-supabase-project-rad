@@ -5,36 +5,17 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+
 </script>
 
 <template>
-  <WelcomeItem>
-    <template #icon>
-      <DocumentationIcon />
-    </template>
-    <template #heading>Robbing Simulator</template>
-
-    SIX CARDS, RANDOM FAKE PEOPLE
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <DocumentationIcon />
-    </template>
-    <template #heading>more details about the user interactions</template>
-
-    add ur own card: need to create the "edit", "add", "create" nodes... also be able to add picture??
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <ToolingIcon />
-    </template>
-    <template #heading>Addresses</template>
-
-    ADDRESS, AGE, # OF FAMILY, NET WORTH, PIC OF HOUSE
-  </WelcomeItem>
+    <v-card class="mx-auto" max-width="400"></v-card>
+    <v-img
+      color="surface-variant"
+      height="200"
+      src="https://cdn.vuetifyjs.com/docs/images/cards/purple-flowers.jpg"
+      cover
+    ></v-img>
 
 <!--   <WelcomeItem>
     <template #icon>
