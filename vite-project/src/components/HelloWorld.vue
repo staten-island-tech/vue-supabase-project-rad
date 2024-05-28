@@ -1,23 +1,25 @@
-``<script setup>
+<script setup>
 defineProps({
   msg: {
     type: String,
     required: true
   }
 })
+
+import PostItList from './PostItList.vue';
+
+
 </script>
 
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
-    <h1>YOU SIGNED IN KHANGRABULASHION</h1>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About zi yang fan</RouterLink>
-    <h3>
-      GET OUTA HERE
-      <a href="google.com" target="_blank" rel="noopener">Google</a> 
-      <a href="https://classroom.google.com/c/NjI4MjQ3OTIyNTYy" target="_blank" rel="noopener">Class</a>.
-    </h3>
+    <h1>YOU SIGNED IN</h1>
+        
+  </div>
+
+  <div>
+    <PostItList />
   </div>
 </template>
 

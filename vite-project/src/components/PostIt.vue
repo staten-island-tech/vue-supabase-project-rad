@@ -18,7 +18,7 @@
     });
     
     const content = ref(props.initialContent);
-    const isEditing = ref(false);
+    const isEditing = ref(true);
     
     const toggleEdit = () => {
       if (isEditing.value) {
