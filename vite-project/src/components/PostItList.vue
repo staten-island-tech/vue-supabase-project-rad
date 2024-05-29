@@ -8,6 +8,7 @@
             :initialContent="note.content"
           @update="updatePostIt(index, $event)"
             @delete="deletePostIt(index)"
+            @pls="pls(index, $event)"
           />
         </div>
     </div>
@@ -28,11 +29,13 @@ const updatePostIt = (index, newContent) => {
   postIts.value[index].content = newContent;
 }
 
-const deletePostIt = (index) => {
-  postIts.value.splice(index, 1);
+const deletePostIt = () => {
+  postIts.value.splice(0,1);
 }
 
-
+const pls = () => {
+postIts.value.newContent.splice(0,1);
+}
 
 </script>
 
