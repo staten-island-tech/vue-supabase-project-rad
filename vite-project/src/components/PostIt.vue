@@ -1,6 +1,6 @@
 <template>
     <div class="post-it-note">
-        <textarea v-if="isEditing" v-model="content"></textarea>
+        <textarea v-if="isEditing" v-model="content" v-on:change="$emit('update', content)"></textarea>
         <div v-else>{{ content }}</div>
         <button @click="toggleEdit">{{ isEditing ? 'Save' : 'Edit' }}</button>
         <button @click="$emit('delete')">Delete</button>
@@ -8,7 +8,7 @@
     </template>
     
     <script setup>
-    import { ref } from 'vue';
+    import { ref, watch } from 'vue';
     
     const props = defineProps({
       initialContent: {
@@ -19,6 +19,11 @@
     
     const content = ref(props.initialContent);
     const isEditing = ref(true);
+    watch(()=> 
+      props.initialContent, (old,newvalue)=>{
+        content.value = newvalue;
+      }
+    )
     
     const toggleEdit = () => {
       if (isEditing.value) {

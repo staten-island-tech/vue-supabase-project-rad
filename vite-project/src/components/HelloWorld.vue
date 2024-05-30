@@ -1,5 +1,5 @@
 ``<script setup>
-import PostItList from './PostItList.vue'
+import PostItList from "./PostItList.vue"
 defineProps({
   msg: {
     type: String,
