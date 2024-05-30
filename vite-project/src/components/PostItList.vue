@@ -19,17 +19,19 @@ import { ref } from 'vue';
 import PostIt from './PostIt.vue';
 
 const postIts = ref([]);
-
+let x = 0
 const addPostIt = () => {
-  postIts.value.push({ content: '' });
+  postIts.value.push({ content: '' , id: x});
+  x+1
 }
 
 const updatePostIt = (index, newContent) => {
   postIts.value[index].content = newContent;
 }
 
-const deletePostIt = (index) => {
-  postIts.value.splice(index, 1);
+const deletePostIt = (id) => {
+  postIts.value.splice(Number(id), 1);
+  x = x-1
 }
 
 </script>
