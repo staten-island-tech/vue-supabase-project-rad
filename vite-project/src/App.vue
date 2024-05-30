@@ -31,7 +31,7 @@ onMounted(()=>{
 
     <div class="wrapper">
       <Auth v-if="!store.state.user" />
-      <HelloWorld v-else msg="chimchin nuges"
+      <HelloWorld v-else msg="meow"
        />
 
       <nav>
@@ -101,6 +101,7 @@ nav a:first-of-type {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+    text-align: center;
   }
 
   nav {

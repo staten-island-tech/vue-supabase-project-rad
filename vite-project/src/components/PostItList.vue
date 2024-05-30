@@ -2,7 +2,7 @@
     <div>
         <button @click="addPostIt">Add Post-it Note</button>
         <div class="post-it-container">
-        <PostIt
+          <PostIt
             v-for="(note, index) in postIts"
             :key="index"
             :initialContent="note.content"
@@ -18,18 +18,22 @@
 import { ref } from 'vue';
 import PostIt from './PostIt.vue';
 
-const postIts = ref([]);
+let id = 0
 
-const addPostIt = () => {
-  postIts.value.push({ content: '' });
+const newpostIts = ref('');
+const postIts = ref([])
+
+function addPostIt() {
+  postIts.value.push({ id: id++, text: newpostIts.value })
+  newpostIts.value = ''
 }
 
-const updatePostIt = (index, newContent) => {
-  postIts.value[index].content = newContent;
+const updatePostIt = (post, newContent) => {
+  postIts.value[post].content = newContent;
 }
 
-const deletePostIt = (index) => {
-  postIts.value.splice(index, 1);
+function deletePostIt(post) {
+  postIts.value = post.value.filter((i) => i !== post)
 }
 
 </script>
