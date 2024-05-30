@@ -6,8 +6,8 @@
             v-for="(note, index) in postIts"
             :key="index"
             :initialContent="note.content"
-            @update="updatePostIt(index, $event)"
-            @delete="deletePostIt(index)"
+            @update="updatePostIt(index, $event); $forceUpdate()"
+            @delete="deletePostIt(index); $forceUpdate()"
           />
         </div>
     </div>
@@ -26,10 +26,13 @@ const addPostIt = () => {
 
 const updatePostIt = (index, newContent) => {
   postIts.value[index].content = newContent;
+
 }
 
 const deletePostIt = (index) => {
-  postIts.value.splice(index, 1);
+  const items = [...postIts.value]
+  items.splice(index, 1);
+  postIts.value = items;
 }
 
 </script>
