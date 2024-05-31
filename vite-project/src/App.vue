@@ -50,6 +50,7 @@ onMounted(()=>{
 .outer {
   display: flex;
   flex-direction: column;
+  font-family: 'Manrope', sans-serif;
 }
 header {
   line-height: 1.5;
@@ -102,6 +103,7 @@ nav a:first-of-type {
     place-items: flex-start;
     flex-wrap: wrap;
     justify-content: center;
+    font-family: 'Manrope', sans-serif;
   }
 
   nav {

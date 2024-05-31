@@ -38,6 +38,7 @@
         padding: 10px;
         margin: 10px;
         position: relative;
+        font-family: 'Manrope', sans-serif;
       }
       
       textarea {
@@ -45,12 +46,14 @@
         height: 100%;
         border: none;
         resize: none;
+        font-family: 'Manrope', sans-serif;
       }
       
       button {
         position: absolute;
         bottom: 5px;
         right: 5px;
+        font-family: 'Manrope', sans-serif;
       }
       
       .editing div {

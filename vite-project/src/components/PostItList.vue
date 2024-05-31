@@ -52,5 +52,6 @@ function deletePostIt(post) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-family: 'Manrope', sans-serif;
   }
 </style>
