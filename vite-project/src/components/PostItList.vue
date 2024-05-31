@@ -1,18 +1,17 @@
 <template>
-    <div>
-      <div class="add">
-        <button class="add" @click="addPostIt">Add Post-it Note</button>
+  <div>
+      <button @click="addPostIt">Add Post-it Note</button>
+      <div class="post-it-container">
+      <PostIt
+          v-for="(note, index) in postIts"
+          :key="index"
+          :initialContent="note.content"
+        @update="updatePostIt(index, $event)"
+          @delete="deletePostIt(index)"
+          @pls="pls(index, $event)"
+        />
       </div>
-        <div class="post-it-container">
-          <PostIt
-            v-for="(note, index) in postIts"
-            :key="index"
-            :initialContent="note.content"
-            @update="updatePostIt(index, $event)"
-            @delete="deletePostIt(index)"
-          />
-        </div>
-    </div>
+  </div>
 </template>
 
 <script setup>
@@ -20,24 +19,23 @@
 import { ref } from 'vue';
 import PostIt from './PostIt.vue';
 
-let id = 0
+const postIts = ref([]);
 
-const newpostIts = ref('');
-const postIts = ref([])
-
-function addPostIt() {
-  postIts.value.push({ id: id++, text: newpostIts.value })
-  newpostIts.value = ''
+const addPostIt = () => {
+postIts.value.push({ content: '' });
 }
 
-const updatePostIt = (post, newContent) => {
-  postIts.value[post].content = newContent;
+const updatePostIt = (index, newContent) => {
+postIts.value[index].content = newContent;
 }
 
-function deletePostIt(post) {
-  postIts.value = post.value.filter((i) => i !== post)
+const deletePostIt = () => {
+postIts.value.splice(0,1);
 }
 
+const pls = () => {
+postIts.value.newContent.splice(0,1);
+}
 </script>
 
 <style lang="scss" scoped>
