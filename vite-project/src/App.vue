@@ -101,7 +101,7 @@ nav a:first-of-type {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
-    text-align: center;
+    justify-content: center;
   }
 
   nav {

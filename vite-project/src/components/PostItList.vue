@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button @click="addPostIt">Add Post-it Note</button>
+        <button class="add" @click="addPostIt">Add Post-it Note</button>
         <div class="post-it-container">
           <PostIt
             v-for="(note, index) in postIts"
