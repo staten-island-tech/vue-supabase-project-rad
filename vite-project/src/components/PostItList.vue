@@ -1,6 +1,8 @@
 <template>
     <div>
+      <div class="add">
         <button class="add" @click="addPostIt">Add Post-it Note</button>
+      </div>
         <div class="post-it-container">
           <PostIt
             v-for="(note, index) in postIts"
@@ -43,6 +45,12 @@ function deletePostIt(post) {
 .post-it-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
+  .add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 </style>
