@@ -4,11 +4,11 @@
         <div class="post-it-container">
         <PostIt
             v-for="(note, index) in postIts"
-            :key="index"
+            :key="note.id"
             :initialContent="note.content"
           @update="updatePostIt(index, $event)"
-            @delete="deletePostIt(index)"
-            @pls="pls(index, $event)"
+            @delete="handleDelete(index)"
+            
           />
         </div>
     </div>
@@ -17,25 +17,31 @@
 <script setup>
 
 import { ref } from 'vue';
+import { v4 as uuidv4 } from 'uuid';
 import PostIt from './PostIt.vue';
 
 const postIts = ref([]);
 
 const addPostIt = () => {
-  postIts.value.push({ content: '' });
+  postIts.value.push({ id: uuidv4(), content: '' });
 }
 
 const updatePostIt = (index, newContent) => {
   postIts.value[index].content = newContent;
 }
 
-const deletePostIt = () => {
-  postIts.value.splice(0,1);
+const deletePostIt = (index) => {
+  console.log("is it deleting:", index);
+  postIts.value.splice(index,1);
 }
 
-const pls = () => {
-postIts.value.newContent.splice(0,1);
+const handleDelete = (index) => {
+  deletePostIt(index);
 }
+
+/* const pls = () => {
+postIts.value.newContent.splice(0,1); */
+//}
 
 </script>
 

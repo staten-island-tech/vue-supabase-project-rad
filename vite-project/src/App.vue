@@ -12,7 +12,7 @@ onMounted(async () => {
   // initially verify if a user is logged in w supabase
   const { data: { user } } = await supabase.auth.getUser();
   store.state.user = user;
-  console.log('User on initial load:', store.state.user);
+ 
 
   // set up a listener to update when user changes either by logging in/out
   supabase.auth.onAuthStateChange((event, session) => {
@@ -21,13 +21,13 @@ onMounted(async () => {
     } else {
       store.state.user = session.user;
     }
-    console.log('User on auth state change:', store.state.user);
+   
   });
 });
 
 // changes in user state
 watch(() => store.state.user, (newUser) => {
-  console.log('User state changed:', newUser);
+
 });
 
 
