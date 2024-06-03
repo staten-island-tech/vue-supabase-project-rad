@@ -47,14 +47,17 @@ onMounted(()=>{
 </template>
 
 <style scoped>
+
 .outer {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   font-family: 'Manrope', sans-serif;
 }
 header {
   line-height: 1.5;
   max-height: 100vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .logo {

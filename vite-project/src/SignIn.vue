@@ -1,17 +1,17 @@
 <template>
-  <div>
-    <h2>Sign in to your account</h2>
+  <div class="signindeco">
+    <h2>Sign in to your account!</h2>
     <form @submit.prevent="handleSignin">
-      <div>
-        <label for="email">Email</label>
+      <div class="emaildeco">
+        <label for="email">Email: </label>
         <input id="email" type="email" v-model="email" />
       </div>
-      <div>
-        <label for="password">Password</label>
+      <div class="passworddeco">
+        <label for="password">Password: </label>
         <input id="password" type="password" v-model="password" />
       </div>
       <div>
-        <button type="submit">Sign in</button>
+        <button type="submit">Sign in!</button>
       </div>
     </form>
   </div>
@@ -47,3 +47,17 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+
+.signindeco{
+  display: flex;
+  justify-content: center;
+}
+.emaildeco{
+  margin-bottom: 5px;
+}
+.passworddeco{
+  margin-bottom: 8px;
+}
+</style>
