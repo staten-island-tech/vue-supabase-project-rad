@@ -48,10 +48,15 @@ function deletePostIt(post) {
     justify-content: center;
   }
 
-  .add {
+.add {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     font-family: 'Manrope', sans-serif;
+    transition: all .5s;
   }
+
+.add:hover{
+  transform: scale(1.15);
+}
 </style>

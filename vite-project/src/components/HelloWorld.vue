@@ -40,6 +40,14 @@ h3 {
   text-align: center;
   align-items: center;
   margin-bottom: 5px;
+  place-items: flex-start;
+  filter: grayscale(75%);
+  transition: all .5s;
+}
+
+.greetings:hover {
+    filter: grayscale(0);
+    transform: scale(0.8);
 }
 
 @media (min-width: 1024px) {
