@@ -48,10 +48,21 @@ onMounted(()=>{
 
 <style scoped>
 
+:root {
+  --main-font-color: #333333; 
+}
+
+body {
+  color: var(--main-font-color); 
+}
+
 .outer {
   display: flex;
   justify-content: center;
   font-family: 'Manrope', sans-serif;
+  background-color: #c1cfc3;
+  min-height: 100vh;
+  min-width: 100vh;
 }
 header {
   line-height: 1.5;

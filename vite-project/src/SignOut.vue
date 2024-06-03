@@ -35,10 +35,12 @@
 <style>
 .buttonwrapper {
   text-align: end;
+  justify-content: center;
 }
 
 .delete{
   font-family: 'Manrope', sans-serif;
+  justify-content: right;
 }
 
 </style>
