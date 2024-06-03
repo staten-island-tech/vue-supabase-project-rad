@@ -35,10 +35,17 @@
 <style>
 .buttonwrapper {
   text-align: end;
+  justify-content: center;
 }
 
 .delete{
   font-family: 'Manrope', sans-serif;
+  justify-content: right;
+  transition: all .5s;
 }
 
+.delete:hover {
+    filter: grayscale(0);
+    transform: scale(1.15);
+}
 </style>

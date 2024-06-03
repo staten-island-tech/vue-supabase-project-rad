@@ -14,7 +14,7 @@ import PostItList from './PostItList.vue';
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
-    <h3>YOU SIGNED IN</h3>
+    <h3>Signed in.</h3>
         
   </div>
 
@@ -39,6 +39,15 @@ h3 {
 .greetings {
   text-align: center;
   align-items: center;
+  margin-bottom: 5px;
+  place-items: flex-start;
+  filter: grayscale(75%);
+  transition: all .5s;
+}
+
+.greetings:hover {
+    filter: grayscale(0);
+    transform: scale(0.8);
 }
 
 @media (min-width: 1024px) {

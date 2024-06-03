@@ -47,14 +47,27 @@ onMounted(()=>{
 </template>
 
 <style scoped>
+
+:root {
+  --main-font-color: #000000; 
+}
+
+body {
+  color: var(--main-font-color); 
+}
+
 .outer {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   font-family: 'Manrope', sans-serif;
+  color:#000000;
+  background: #ffffff;
 }
 header {
   line-height: 1.5;
   max-height: 100vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .logo {

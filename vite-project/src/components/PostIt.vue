@@ -34,13 +34,20 @@
     .post-it-note {
         width: 200px;
         height: 200px;
-        background-color: yellow;
+        background-color: rgb(173, 111, 170);
         padding: 10px;
+        margin-top: 30px;
+        color: rgba(132, 24, 89, 0.827);
         margin: 10px;
+        transition: all .5s;
+        filter: grayscale(65%);
         position: relative;
         font-family: 'Manrope', sans-serif;
       }
-      
+    .post-it-note:hover{
+      filter: grayscale(0);
+      transform: scale(1.1);
+    }
       textarea {
         width: 100%;
         height: 100%;

@@ -1,0 +1,15 @@
+:root{
+    --color: #8dae92;
+    --primary: var(--color);
+}
+body{
+    background-color: var(--primary);
+}
+
+html,
+body,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
