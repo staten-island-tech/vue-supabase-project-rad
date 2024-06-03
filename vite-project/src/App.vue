@@ -31,7 +31,7 @@ onMounted(()=>{
 
     <div class="wrapper">
       <Auth v-if="!store.state.user" />
-      <HelloWorld v-else msg="meow"
+      <HelloWorld v-else msg=""
        />
 
       <nav>

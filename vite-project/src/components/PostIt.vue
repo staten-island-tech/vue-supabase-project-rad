@@ -38,10 +38,9 @@
     background-color: rgb(173, 111, 170);
     padding: 10px;
     margin-top: 30px;
-    color: rgba(132, 24, 89, 0.827);
     margin: 10px;
     transition: all .5s;
-    filter: grayscale(65%);
+    filter: grayscale(50%);
     position: relative;
     font-family: 'Manrope', sans-serif;
 }
@@ -54,6 +53,7 @@
     height: 100%;
     border: none;
     resize: none;
+    color: rgb(189, 54, 76);
     font-family: 'Manrope', sans-serif;
 }
   .buttons{
@@ -66,6 +66,7 @@
     bottom: 5px;
     right: 5px;
     font-family: 'Manrope', sans-serif;
+    color: rgb(150, 56, 71);
 }
       
   .editing div {

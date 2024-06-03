@@ -54,6 +54,7 @@ postIts.value.newContent.splice(0,1);
     justify-content: center;
     font-family: 'Manrope', sans-serif;
     transition: all .5s;
+    color: rgb(233, 135, 151);
   }
 
 .add:hover{

@@ -41,13 +41,14 @@ h3 {
   align-items: center;
   margin-bottom: 5px;
   place-items: flex-start;
-  filter: grayscale(75%);
+  filter: grayscale(25%);
   transition: all .5s;
+  color: rgb(236, 141, 157);
 }
 
 .greetings:hover {
     filter: grayscale(0);
-    transform: scale(0.8);
+    transform: scale(0.9);
 }
 
 @media (min-width: 1024px) {
