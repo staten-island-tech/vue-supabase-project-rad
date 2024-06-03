@@ -13,8 +13,8 @@ import PostItList from './PostItList.vue';
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>Signed in.</h3>
+<!--     <h1 class="green">{{ msg }}</h1> -->
+    <h3>Signed in. Welcome!</h3>
         
   </div>
 
