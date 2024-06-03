@@ -29,7 +29,7 @@
       const handleSignup = async () => {
         try {
           // Use the Supabase provided method to handle the signup
-          const { error } = await supabase.auth.signUp({
+          const { error } = await supabase.signUp({
             email: email.value,
             password: password.value,
           });
