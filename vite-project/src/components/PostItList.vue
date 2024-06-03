@@ -16,22 +16,31 @@
 
 <script setup>
 
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { v4 as uuidv4 } from 'uuid';
 import PostIt from './PostIt.vue';
-
+import { supabase } from '@/supabase';
 const postIts = ref([]);
-
-const addPostIt = () => {
-  postIts.value.push({ id: uuidv4(), content: '' });
+const init = async()=>{
+  const { data, error } = await supabase.from("postits").select(); 
+  postIts.value = data;
+}
+onMounted(init);
+const addPostIt = async() => {
+  const newNote = { id: uuidv4(), content: '' };
+  postIts.value.push(newNote);
+  const {error} = await supabase.from("postits").upsert(newNote)
 }
 
-const updatePostIt = (index, newContent) => {
+const updatePostIt = async(index, newContent) => {
   postIts.value[index].content = newContent;
+  const {error} = await supabase.from("postits").update({content:newContent}).eq("id",postIts.value[index].id)
 }
 
-const deletePostIt = (index) => {
+const deletePostIt = async(index) => {
   console.log("is it deleting:", index);
+  const {error} = await supabase.from("postits").delete().eq("id",postIts.value[index].id)
+
   postIts.value.splice(index,1);
 }
 
