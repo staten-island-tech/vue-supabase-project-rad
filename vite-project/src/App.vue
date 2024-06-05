@@ -27,16 +27,12 @@ onMounted(()=>{
   <div class="outer">
   <sign-out v-if="store.state.user"/>
   <header>
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
-
     <div class="wrapper">
       <Auth v-if="!store.state.user" />
       <HelloWorld v-else msg=""
        />
 
       <nav>
-       <!--  <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About zi yang fan</RouterLink> -->
       </nav>
     </div>
   </header>
