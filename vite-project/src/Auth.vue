@@ -2,7 +2,7 @@
     <div>
       <sign-up v-if="isSignUp" />
       <sign-in v-else />
-      <button @click="isSignUp = !isSignUp">
+      <button class="signupin" @click="isSignUp = !isSignUp">
         {{
           isSignUp
             ? "Already have an account? Sign In"
@@ -27,5 +27,11 @@
     },
   };
   </script>
-  
-  <style scoped></style>
+
+<style scoped>
+  .signupin{
+    display: flex;
+    justify-content: right;
+    font-family: 'Manrope', sans-serif;
+  }
+</style>

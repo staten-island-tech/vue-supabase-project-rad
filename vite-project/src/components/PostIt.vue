@@ -32,30 +32,48 @@ const toggleEdit = () => {
 </script>
 
 <style lang="scss" scoped>
-.post-it-note {
-  width: 200px;
-  height: 200px;
-  background-color: yellow;
-  padding: 10px;
-  margin: 10px;
-  position: relative;
+  .post-it-note {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(173, 111, 170);
+    padding: 10px;
+    margin-top: 30px;
+    margin: 10px;
+    transition: all .5s;
+    filter: grayscale(50%);
+    position: relative;
+    font-family: 'Manrope', sans-serif;
 }
-.buttons{
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
+  .post-it-note:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+    }
+  textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    resize: none;
+    color: rgb(189, 54, 76);
+    font-family: 'Manrope', sans-serif;
 }
-textarea {
-  width: 100%;
-  height: 100%;
-  border: none;
-  resize: none;
+  .buttons{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
 }
-.editing div {
-  display: none;
+  button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-family: 'Manrope', sans-serif;
+    color: rgb(150, 56, 71);
 }
-
-.editing textarea {
-  display: block;
+      
+  .editing div {
+    display: none;
 }
-</style>
+      
+  .editing textarea {
+    display: block;
+} 
+    </style>

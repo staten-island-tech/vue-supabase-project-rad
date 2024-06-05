@@ -1,8 +1,8 @@
 <template>
-    <div>
-      <h2>Sign up for an account</h2>
+    <div class="all">
+      <h2 id="words">Sign up for an account</h2>
       <form @submit.prevent="handleSignup">
-        <div>
+        <div class="ed">
           <label for="email">Email</label>
           <input id="email" type="email" v-model="email" />
         </div>
@@ -11,7 +11,7 @@
           <input id="password" type="password" v-model="password" />
         </div>
         <div>
-          <button type="submit">Sign up</button>
+          <button id="meow" type="submit">Sign up!</button>
         </div>
       </form>
     </div>
@@ -47,3 +47,32 @@
     },
   };
   </script>
+
+<style scoped>
+
+.all{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+#words{
+  display: flex;
+  text-align: center;
+}
+#meow{
+  display: flex;
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+}
+#email, #password{
+  display: flex;
+  align-items: row;
+  font-family: 'Manrope', sans-serif;
+}
+.ed{
+  margin-bottom: 5px;
+}
+.pd{
+  margin-bottom: 8px;
+}
+</style>

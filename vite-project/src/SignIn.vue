@@ -1,17 +1,17 @@
 <template>
-    <div>
-      <h2>Sign in to your account</h2>
+    <div class="signindeco">
+      <h2 id="words">Sign in to your account</h2>
       <form @submit.prevent="handleSignin">
-        <div>
+        <div class="emaildeco">
           <label for="email">Email</label>
           <input id="email" type="email" v-model="email" />
         </div>
-        <div>
+        <div class="passworddeco">
           <label for="password">Password</label>
           <input id="password" type="password" v-model="password" />
         </div>
         <div>
-          <button type="submit">Sign in</button>
+          <button id="meow" type="submit">Sign in</button>
         </div>
       </form>
     </div>
@@ -47,3 +47,32 @@
     },
   };
   </script>
+
+<style scoped>
+
+#email, #password{
+  display: flex;
+  align-items: row;
+  font-family: 'Manrope', sans-serif;
+}
+#words{
+  display: flex;
+  text-align: center;
+}
+#meow{
+  display: flex;
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+}
+.signindeco{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.emaildeco{
+  margin-bottom: 5px;
+}
+.passworddeco{
+  margin-bottom: 8px;
+}
+</style>

@@ -3,7 +3,7 @@
       
       <form @submit.prevent="handleSignOut">
         <div>
-          <button type="submit">Sign Out</button>
+          <button class="delete" type="submit">Sign Out</button>
         </div>
       </form>
     </div>
@@ -32,9 +32,21 @@
     },
   };
   </script>
+  
 <style>
 .buttonwrapper {
   text-align: end;
+  justify-content: center;
 }
 
+.delete{
+  font-family: 'Manrope', sans-serif;
+  justify-content: right;
+  transition: all .5s;
+}
+
+.delete:hover {
+    filter: grayscale(0);
+    transform: scale(1.15);
+}
 </style>

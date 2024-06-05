@@ -13,8 +13,8 @@ import PostItList from './PostItList.vue';
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h1>YOU SIGNED IN</h1>
+<!--     <h1 class="green">{{ msg }}</h1> -->
+    <h3>Signed in. Welcome!</h3>
         
   </div>
 
@@ -36,13 +36,27 @@ h3 {
   font-size: 1.2rem;
 }
 
-.greetings h1,
-.greetings h3 {
+.greetings {
   text-align: center;
+  align-items: center;
+  margin-bottom: 5px;
+  place-items: flex-start;
+  filter: grayscale(25%);
+  transition: all .5s;
+  color: rgb(236, 141, 157);
+}
+
+.greetings:hover {
+    filter: grayscale(0);
+    transform: scale(0.9);
 }
 
 @media (min-width: 1024px) {
-  .greetings h1,
+  .greetings h1{
+    flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
   .greetings h3 {
     text-align: left;
   }
