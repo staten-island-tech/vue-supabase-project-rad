@@ -29,8 +29,6 @@ onMounted(async () => {
 watch(() => store.state.user, (newUser) => {
 
 });
-
-
 </script>
 
 <template>
@@ -41,6 +39,8 @@ watch(() => store.state.user, (newUser) => {
     <div class="wrapper">
       <Auth v-if="!store.state.user" />
       <HelloWorld v-else msg=""/>
+      <nav>
+      </nav>
     </div>   
   </header>
 </div>
