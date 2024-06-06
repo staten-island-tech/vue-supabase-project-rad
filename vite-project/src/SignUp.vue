@@ -63,6 +63,7 @@
   display: flex;
   text-align: center;
   font-family: 'Manrope', sans-serif;
+  margin-top: 8px;
 }
 #email, #password{
   display: flex;
