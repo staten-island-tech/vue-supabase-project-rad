@@ -61,14 +61,7 @@ const toggleEdit = () => {
     bottom: 5px;
     right: 5px;
 }
-  button {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    font-family: 'Manrope', sans-serif;
-    color: rgb(150, 56, 71);
-}
-      
+
   .editing div {
     display: none;
 }

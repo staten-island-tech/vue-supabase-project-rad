@@ -9,12 +9,15 @@ import { useUserStore } from "@/store"
 
 const userStore = useUserStore();
 onMounted(async () => {
-  
   // initially verify if a user is logged in w supabase
   const { data } = await supabase.auth.getUser();
   /* store.state.user = user; */
   userStore.setUser(data.user)
- 
+  const { datas } = supabase
+  .from('profiles')
+  .select()
+  .eq('id', data.user)
+
 
   // set up a listener to update when user changes either by logging in/out
   supabase.auth.onAuthStateChange((event, session) => {

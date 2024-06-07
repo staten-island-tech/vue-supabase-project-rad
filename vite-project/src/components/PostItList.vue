@@ -15,14 +15,14 @@
 </template>
 
 <script setup>
-
+import { useUserStore } from "@/store"
 import { onMounted, ref } from 'vue';
 import { v4 as uuidv4 } from 'uuid';
 import PostIt from './PostIt.vue';
 import { supabase } from '@/supabase';
 const postIts = ref([]);
 const init = async()=>{
-const { data, error } = await supabase.from("postits").select(); 
+const { error, data } = await supabase.from("postits").select(); 
 postIts.value = data;
 }
 onMounted(init);
@@ -55,11 +55,25 @@ postIts.value.newContent.splice(0,1); */
 
 </script>
 
+
 <style lang="scss" scoped>
 
 .post-it-container {
-  display: flex;
-  flex-wrap: wrap;
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
+.add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Manrope', sans-serif;
+    transition: all .5s;
+    color: rgb(233, 135, 151);
+  }
+
+.add:hover{
+  transform: scale(1.15);
+}
 </style>
