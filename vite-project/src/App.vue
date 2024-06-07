@@ -39,7 +39,6 @@ onMounted(async () => {
   <div class="outer">
   <sign-out v-if="userStore.user"/>
   <header>
-<h1>hello</h1>
     <div class="wrapper">
       <Auth v-if="!userStore.user" />
       <HelloWorld v-else msg="Welcome to your dashboard"/>
