@@ -59,12 +59,6 @@ postIts.value.newContent.splice(0,1); */
 <style lang="scss" scoped>
 
 .post-it-container {
-<<<<<<< HEAD
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-=======
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -83,7 +77,6 @@ postIts.value.newContent.splice(0,1); */
 .add:hover{
   transform: scale(1.15);
 }
->>>>>>> ec4f24cfe73f4e8441df9a8891e270839661e882
 
 .add {
     display: flex;
