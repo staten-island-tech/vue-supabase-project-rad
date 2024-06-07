@@ -39,6 +39,7 @@ h3 {
 .greetings {
   text-align: center;
   align-items: center;
+  justify-content: center;
   margin-bottom: 5px;
   place-items: flex-start;
   filter: grayscale(25%);

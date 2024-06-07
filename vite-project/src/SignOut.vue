@@ -41,8 +41,9 @@
 
 .delete{
   font-family: 'Manrope', sans-serif;
-  justify-content: right;
+  justify-content: center;
   transition: all .5s;
+  margin-right: 10px;
 }
 
 .delete:hover {

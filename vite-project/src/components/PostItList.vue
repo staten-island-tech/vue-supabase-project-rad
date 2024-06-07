@@ -1,6 +1,6 @@
 <template>
   <div>
-      <button @click="addPostIt" autofocus>Add Post-it Note</button>
+      <button class="add" @click="addPostIt" autofocus>Add Post-it Note</button>
       <div class="post-it-container">
       <PostIt
           v-for="(note, index) in postIts"
@@ -59,10 +59,31 @@ postIts.value.newContent.splice(0,1); */
 <style lang="scss" scoped>
 
 .post-it-container {
+<<<<<<< HEAD
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
+=======
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  }
+
+.add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Manrope', sans-serif;
+    transition: all .5s;
+    color: rgb(233, 135, 151);
+  }
+
+.add:hover{
+  transform: scale(1.15);
+}
+>>>>>>> ec4f24cfe73f4e8441df9a8891e270839661e882
 
 .add {
     display: flex;
