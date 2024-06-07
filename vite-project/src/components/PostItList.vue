@@ -59,8 +59,9 @@ postIts.value.newContent.splice(0,1); */
 
 .post-it-container {
   display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   }
 
 .add {

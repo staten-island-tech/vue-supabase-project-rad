@@ -43,8 +43,6 @@ onMounted(async () => {
       <Auth v-if="!userStore.user" />
       <HelloWorld v-else msg="Welcome to your dashboard"/>
     </div>
-
-   
   </header>
 </div>
 

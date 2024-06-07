@@ -58,6 +58,8 @@
 #words{
   display: flex;
   text-align: center;
+  justify-content: center;
+  margin-right: 10px;
 }
 #meow{
   display: flex;
